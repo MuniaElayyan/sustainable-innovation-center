@@ -1,392 +1,1243 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sustainable Innovation Center</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sustainable Innovation Center</title>
+
     <link rel="icon" type="image/png" href="لوجو.png">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script>
+
+        tailwind.config = {
+
+            darkMode: "class",
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        primary: "#2563eb",
+
+                        secondary: "#6366f1",
+
+                        accent: "#14b8a6"
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
 </head>
-<body class="bg-gray-50 font-sans">
-<div class="min-h-screen border-[6px] border-[#e8d8c3] rounded-2xl shadow-sm">
-<nav class="bg-white shadow-lg fixed w-full z-50 top-0">
-<div class="container mx-auto px-4 py-4">
-<div class="flex justify-between items-center">
+
+<body
+class="bg-slate-50
+text-slate-800
+dark:bg-slate-950
+dark:text-slate-100
+transition-colors
+duration-500">
+
+<div class="min-h-screen border-[6px] border-[#e8d8c3] dark:border-slate-800 rounded-3xl overflow-hidden">
+
+    <header
+class="fixed
+top-0
+left-0
+right-0
+z-50
+bg-white/90
+dark:bg-slate-900/90
+backdrop-blur-xl
+border-b
+border-slate-200
+dark:border-slate-800
+shadow-sm">
+
+<div class="container mx-auto">
+
+<div class="px-6">
+
+<div class="flex items-center justify-between h-24">
+
+<!-- Logo -->
+
+<div class="flex items-center gap-4">
+
+<img
+src="لوجو.png"
+alt="Logo"
+class="h-24 w-auto object-contain">
+
+<div>
+
+<span
+class="inline-block
+px-3
+py-1
+rounded-full
+text-xs
+font-semibold
+bg-blue-100
+text-blue-700
+dark:bg-blue-900/40
+dark:text-blue-300">
+
+Architecture & Engineering
+
+</span>
+
+</div>
+
+</div>
+
+<!-- Desktop Menu -->
+
+<nav class="hidden lg:flex items-center gap-8">
+
+<a href="#home"
+class="hover:text-blue-600 transition">
+
+Home
+
+</a>
+
+<a href="#services"
+class="hover:text-blue-600 transition">
+
+Services
+
+</a>
+
+<a href="#projects"
+class="hover:text-blue-600 transition">
+
+Projects
+
+</a>
+
+<a href="#achievements"
+class="hover:text-blue-600 transition">
+
+Achievements
+
+</a>
+
+<a href="#team"
+class="hover:text-blue-600 transition">
+
+Team
+
+</a>
+
+<a href="#contact"
+class="hover:text-blue-600 transition">
+
+Contact
+
+</a>
+
+</nav>
+
 <div class="flex items-center gap-3">
 
-    <img
-        src="لوجو.png"
-        alt="SIC Logo"
-        class="h-24 w-auto object-contain">
+<!-- Dark Mode -->
 
-    <div>
-       
+<button
 
-        <span class="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded-full">
-        Architecture & Engineering
-    </span>
-    </div>
+id="theme-toggle"
 
-</div>
+class="w-11
+h-11
+rounded-xl
+bg-slate-100
+dark:bg-slate-800
+hover:scale-110
+transition">
 
-<div class="hidden md:flex space-x-8">
-<a href="#home" class="text-gray-700 hover:text-blue-600 transition font-medium">
-Home
-</a>
-<a href="#services" class="text-gray-700 hover:text-blue-600 transition font-medium">
-Services
-</a>
-<a href="#achievements" class="text-gray-700 hover:text-blue-600 transition font-medium">
-Achievements
-</a>
-<a href="#team" class="text-gray-700 hover:text-blue-600 transition font-medium">
-Team
-</a>
-<a href="#contact" class="text-gray-700 hover:text-blue-600 transition font-medium">
-Contact 
-</a>
-</div>
+<i class="fas fa-moon"></i>
 
+</button>
 
-<div class="hidden md:block">
-<a href="#projects"
-class="bg-blue-600 text-white
-px-3 sm\:px-4 md\:px-6
-py-2 sm\:py-2.5
-text-sm sm\:text-base
-rounded-lg
-hover\:bg-blue-700
-transition-all duration-300
-shadow-md
-whitespace-nowrap">
+<a
+href="#projects"
+
+class="hidden
+md:inline-flex
+items-center
+justify-center
+px-6
+py-3
+rounded-xl
+bg-blue-600
+hover:bg-blue-700
+text-white
+font-semibold
+transition">
+
 Explore Our Designs
+
 </a>
-</div>
 
+<!-- Mobile -->
 
-<details class="relative md:hidden">
+<details class="lg:hidden relative">
 
-<summary class="list-none cursor-pointer text-3xl text-gray-700">
+<summary
+class="list-none
+cursor-pointer
+text-3xl">
+
 ☰
+
 </summary>
 
+<div
 
-<div class="absolute right-0 mt-4 w-60 bg-white rounded-2xl shadow-2xl border p-6 flex flex-col gap-5">
+class="absolute
+right-0
+mt-5
+w-64
+rounded-2xl
+bg-white
+dark:bg-slate-900
+shadow-2xl
+border
+border-slate-200
+dark:border-slate-700
+p-6">
 
+<div class="flex flex-col gap-5">
 
-<a href="#home" class="text-gray-700 hover:text-blue-600 transition">
-Home
+<a href="#home">Home</a>
+
+<a href="#services">Services</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#achievements">Achievements</a>
+
+<a href="#team">Team</a>
+
+<a href="#contact">Contact</a>
+
+<a
+
+href="#projects"
+
+class="mt-2
+rounded-xl
+bg-blue-600
+text-white
+text-center
+py-3">
+
+Explore
+
 </a>
 
-<a href="#services" class="text-gray-700 hover:text-blue-600 transition">
-Services
-</a>
-
-<a href="#projects" class="text-gray-700 hover:text-blue-600 transition">
-Our Work
-</a>
-
-<a href="#team" class="text-gray-700 hover:text-blue-600 transition">
-Our Team
-</a>
-
-<a href="#contact" class="text-gray-700 hover:text-blue-600 transition">
-Contact Us
-</a>
-
-
-<a href="#projects"
-class="bg-blue-600 text-white px-5 py-3 rounded-lg hover\:bg-blue-700 transition">
-Explore Our Designs
-</a>
 </div>
+
+</div>
+
 </details>
-</div>
-</div>
-</nav>
-<div class="pt-20"></div>
 
-<section class="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center" id="home">
-<div class="container mx-auto px-4 py-16">
-<div class="flex flex-col lg:flex-row items-center gap-12">                
-<div class="flex-1 space-y-8">
-<h1 class="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-Where <span class="text-blue-600">Design</span> Meets <span class="text-blue-600">Engineering</span></h1>
-<p class="text-xl text-gray-600 leading-relaxed">
-We provide innovative architectural and engineering solutions, delivering high-quality designs, smart spaces, and sustainable projects that transform ideas into reality.                    <!-- Features in the hero -->
-<div class="flex flex-wrap gap-6">
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-<i class="fas fa-check text-white text-xs"></i>
-</div>
-<span class="text-gray-700">10+ Years Experience</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-<i class="fas fa-check text-white text-xs"></i>
-</div>
-<span class="text-gray-700">100+ Completed Projects</span>
-</div>
-<div class="flex items-center gap-2">
-<div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-<i class="fas fa-check text-white text-xs"></i>
-</div>
-<span class="text-gray-700">Professional Engineering Team</span>
-</div>
-</div>
-<div class="flex flex-wrap gap-4">
-<button class="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-2xl focus:ring-4 focus:ring-blue-300">
-Explore Our Projects</button>
-<button class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 flex items-center gap-2">
- <i class="fas fa-play"></i>
- Watch Our Work  </button>
-</div>
 </div>
 
-<div class="relative">
-<video 
-autoplay 
-muted 
-loop 
-playsinline
-class="w-full h-[500px] object-cover rounded-3xl shadow-2xl">
-<source src="تصميم بدون عنوان.mp4" type="video/mp4">
-</video>
+</div>
 
+</div>
 
+</div>
 
-    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl">
+</header>
 
-        <div class="flex items-center gap-3">
+<div class="h-24"></div>
 
-            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+<script>
 
-                <i class="fas fa-building text-green-600 text-xl"></i>
+const html = document.documentElement;
+
+const btn = document.getElementById("theme-toggle");
+
+if (
+localStorage.theme === "dark" ||
+(
+!localStorage.theme &&
+window.matchMedia("(prefers-color-scheme: dark)").matches
+)
+) {
+
+html.classList.add("dark");
+
+btn.innerHTML = '<i class="fas fa-sun"></i>';
+
+}
+
+btn.onclick = () => {
+
+html.classList.toggle("dark");
+
+if (html.classList.contains("dark")) {
+
+localStorage.theme = "dark";
+
+btn.innerHTML = '<i class="fas fa-sun"></i>';
+
+}
+
+else {
+
+localStorage.theme = "light";
+
+btn.innerHTML = '<i class="fas fa-moon"></i>';
+
+}
+
+};
+
+</script>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section
+id="home"
+class="relative overflow-hidden
+bg-gradient-to-br
+from-blue-50
+via-white
+to-indigo-50
+dark:from-slate-950
+dark:via-slate-900
+dark:to-slate-950">
+
+    <!-- Background Blur -->
+
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-6 py-20 relative z-10">
+
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+
+            <!-- ================= LEFT CONTENT ================= -->
+
+            <div class="flex-1">
+
+                <span
+                class="inline-flex items-center gap-2
+                bg-blue-100 dark:bg-blue-900/40
+                text-blue-700 dark:text-blue-300
+                px-4 py-2 rounded-full
+                text-sm font-semibold">
+
+                    <i class="fa-solid fa-award"></i>
+
+                    Sustainable Innovation Center
+
+                </span>
+
+                <h1
+                class="mt-8
+                text-5xl
+                lg:text-7xl
+                font-extrabold
+                leading-tight">
+
+                    Where
+
+                    <span class="text-blue-600">
+
+                        Design
+
+                    </span>
+
+                    Meets
+
+                    <span class="text-indigo-600">
+
+                        Engineering
+
+                    </span>
+
+                </h1>
+
+                <p
+                class="mt-8
+                text-lg
+                leading-8
+                text-slate-600
+                dark:text-slate-300
+                max-w-2xl">
+
+                    We provide innovative architectural and engineering
+                    solutions that combine creativity,
+                    sustainability, and modern technologies to
+                    transform ideas into successful projects.
+
+                </p>
+
+                <!-- FEATURES -->
+
+                <div class="grid sm:grid-cols-2 gap-5 mt-10">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <span>10+ Years Experience</span>
+
+                    </div>
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <span>100+ Completed Projects</span>
+
+                    </div>
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white">
+
+                            <i class="fas fa-check"></i>
+
+                        </div>
+
+                        <span>Professional Engineering Team</span>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="flex flex-wrap gap-5 mt-12">
+
+                    <a
+                    href="#services"
+                    class="px-8 py-4
+                    rounded-xl
+                    bg-blue-600
+                    hover:bg-blue-700
+                    text-white
+                    font-semibold
+                    shadow-xl
+                    transition-all duration-300
+                    hover:-translate-y-1">
+
+                        Explore Our Services
+
+                    </a>
+
+                    <a
+                    href="#projects"
+                    class="px-8 py-4
+                    rounded-xl
+                    border
+                    border-slate-300
+                    dark:border-slate-700
+                    hover:border-blue-500
+                    hover:text-blue-600
+                    dark:hover:text-blue-400
+                    transition-all duration-300
+                    hover:-translate-y-1
+                    flex items-center gap-2">
+
+                        <i class="fas fa-folder-open"></i>
+
+                        View Our Projects
+
+                    </a>
+
+                </div>
 
             </div>
 
+            <!-- ================= VIDEO ================= -->
 
-            <div>
+            <div class="flex-1 relative">
 
-                <p class="text-sm text-gray-500">
-                    Completed Projects
-                </p>
+                <div
+                class="absolute
+                -inset-5
+                rounded-[40px]
+                bg-gradient-to-r
+                from-blue-600
+                to-indigo-600
+                opacity-20
+                blur-3xl">
+                </div>
 
+                <div class="relative rounded-[32px] overflow-hidden shadow-2xl">
 
-                <p class="text-2xl font-bold text-gray-800">
-                    +100
-                </p>
+                    <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    class="w-full
+                    h-[550px]
+                    object-cover">
 
+                        <source
+                        src="تصميم بدون عنوان.mp4"
+                        type="video/mp4">
+
+                    </video>
+
+                </div>
+
+                <!-- Floating Card -->
+
+                <div
+                class="absolute
+                -bottom-8
+                -left-8
+                bg-white
+                dark:bg-slate-900
+                p-6
+                rounded-3xl
+                shadow-2xl">
+
+                    <div class="flex items-center gap-4">
+
+                        <div
+                        class="w-14
+                        h-14
+                        rounded-full
+                        bg-green-100
+                        dark:bg-green-900/40
+                        flex
+                        items-center
+                        justify-center">
+
+                            <i class="fas fa-building text-green-600 text-2xl"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-sm text-slate-500">
+
+                                Completed Projects
+
+                            </p>
+
+                            <h2 class="text-3xl font-bold">
+
+                                +100
+
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
-
 
         </div>
-
 
     </div>
 
+</section>
 
-</div>
-                    
-            </div>
-        </div>
-    </section>
+<!-- ================= SERVICES ================= -->
 
-<section class="py-20 bg-white" id="services">
+<section
+id="services"
+class="py-24
+bg-white
+dark:bg-slate-900
+transition-colors
+duration-500">
 
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-6">
 
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <!-- Section Title -->
 
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
-                Our Engineering Services
+        <div class="text-center max-w-3xl mx-auto mb-20">
+
+            <span
+            class="inline-block
+            px-4
+            py-2
+            rounded-full
+            bg-blue-100
+            dark:bg-blue-900/40
+            text-blue-700
+            dark:text-blue-300
+            font-semibold
+            text-sm">
+
+                OUR SERVICES
+
+            </span>
+
+            <h2
+            class="mt-6
+            text-4xl
+            lg:text-5xl
+            font-bold
+            text-slate-900
+            dark:text-white">
+
+                Engineering Excellence
+
             </h2>
 
-            <p class="text-base sm:text-xl text-gray-600 leading-relaxed">
-                We provide integrated architectural and engineering solutions
-                to transform ideas into innovative, functional, and sustainable spaces.
+            <p
+            class="mt-6
+            text-lg
+            text-slate-600
+            dark:text-slate-300
+            leading-8">
+
+                We provide integrated architectural and engineering
+                solutions that combine innovation,
+                sustainability,
+                and modern technologies.
+
             </p>
 
         </div>
 
+        <!-- Cards -->
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+        class="grid
+        md:grid-cols-2
+        xl:grid-cols-3
+        gap-8">
 
+            <!-- Card 1 -->
 
-            <div class="group bg-white border border-gray-200 rounded-3xl p-8
-                        hover:border-blue-600 hover:shadow-2xl
-                        transition-all duration-500">
+            <div
+            class="group
+            rounded-3xl
+            p-8
+            bg-slate-50
+            dark:bg-slate-800
+            border
+            border-slate-200
+            dark:border-slate-700
+            hover:border-blue-500
+            hover:-translate-y-3
+            hover:shadow-2xl
+            transition-all
+            duration-500">
 
-                <div class="w-16 h-16 bg-blue-100 rounded-2xl
-                            flex items-center justify-center mb-6
-                            group-hover:bg-blue-600 transition-all duration-500">
+                <div
+                class="w-20
+                h-20
+                rounded-2xl
+                bg-blue-100
+                dark:bg-blue-900/40
+                flex
+                items-center
+                justify-center
+                group-hover:bg-blue-600
+                transition">
 
-                    <i class="fas fa-building text-3xl text-blue-600
-                              group-hover:text-white transition-all duration-500"></i>
+                    <i class="fas fa-building text-4xl text-blue-600 group-hover:text-white"></i>
 
                 </div>
 
+                <h3 class="mt-8 text-2xl font-bold">
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
                     Architectural Design
+
                 </h3>
 
+                <p class="mt-5 text-slate-600 dark:text-slate-300 leading-7">
 
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    We create modern architectural designs that combine
-                    functionality, aesthetics, and innovative concepts.
+                    Modern architectural concepts with innovative
+                    planning and sustainable design solutions.
+
                 </p>
 
+                <ul class="mt-8 space-y-3">
 
-                <ul class="space-y-3 text-gray-700">
+                    <li>✔ 3D Visualization</li>
 
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-blue-600"></i>
-                        3D Visualization
-                    </li>
+                    <li>✔ Space Planning</li>
 
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-blue-600"></i>
-                        Space Planning
-                    </li>
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-blue-600"></i>
-                        Concept Development
-                    </li>
+                    <li>✔ Concept Development</li>
 
                 </ul>
 
-
             </div>
 
+            <!-- Card 2 -->
 
+            <div
+            class="group
+            rounded-3xl
+            p-8
+            bg-slate-50
+            dark:bg-slate-800
+            border
+            border-slate-200
+            dark:border-slate-700
+            hover:border-purple-500
+            hover:-translate-y-3
+            hover:shadow-2xl
+            transition-all
+            duration-500">
 
+                <div
+                class="w-20
+                h-20
+                rounded-2xl
+                bg-purple-100
+                dark:bg-purple-900/40
+                flex
+                items-center
+                justify-center
+                group-hover:bg-purple-600
+                transition">
 
-
-            <div class="group bg-white border border-gray-200 rounded-3xl p-8
-                        hover:border-purple-600 hover:shadow-2xl
-                        transition-all duration-500">
-
-
-                <!-- Icon -->
-                <div class="w-16 h-16 bg-purple-100 rounded-2xl
-                            flex items-center justify-center mb-6
-                            group-hover:bg-purple-600 transition-all duration-500">
-
-
-                    <i class="fas fa-compass text-3xl text-purple-600
-                              group-hover:text-white transition-all duration-500"></i>
-
+                    <i class="fas fa-compass text-4xl text-purple-600 group-hover:text-white"></i>
 
                 </div>
 
+                <h3 class="mt-8 text-2xl font-bold">
 
-
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
                     Engineering Consulting
+
                 </h3>
 
+                <p class="mt-5 text-slate-600 dark:text-slate-300 leading-7">
 
+                    Expert engineering consultation to ensure
+                    successful planning and execution.
 
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    We provide professional engineering consultations
-                    to ensure efficient planning and successful project execution.
                 </p>
 
+                <ul class="mt-8 space-y-3">
 
+                    <li>✔ Project Planning</li>
 
-                <ul class="space-y-3 text-gray-700">
+                    <li>✔ Technical Solutions</li>
 
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-purple-600"></i>
-                        Project Planning
-                    </li>
-
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-purple-600"></i>
-                        Technical Solutions
-                    </li>
-
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-purple-600"></i>
-                        Quality Management
-                    </li>
-
+                    <li>✔ Quality Management</li>
 
                 </ul>
 
-
             </div>
 
+            <!-- Card 3 -->
 
+            <div
+            class="group
+            rounded-3xl
+            p-8
+            bg-slate-50
+            dark:bg-slate-800
+            border
+            border-slate-200
+            dark:border-slate-700
+            hover:border-emerald-500
+            hover:-translate-y-3
+            hover:shadow-2xl
+            transition-all
+            duration-500">
 
+                <div
+                class="w-20
+                h-20
+                rounded-2xl
+                bg-emerald-100
+                dark:bg-emerald-900/40
+                flex
+                items-center
+                justify-center
+                group-hover:bg-emerald-600
+                transition">
 
-
-
-            <div class="group bg-white border border-gray-200 rounded-3xl p-8
-                        hover:border-green-600 hover:shadow-2xl
-                        transition-all duration-500">
-
-
-                <div class="w-16 h-16 bg-green-100 rounded-2xl
-                            flex items-center justify-center mb-6
-                            group-hover:bg-green-600 transition-all duration-500">
-
-
-                    <i class="fas fa-couch text-3xl text-green-600
-                              group-hover:text-white transition-all duration-500"></i>
-
+                    <i class="fas fa-couch text-4xl text-emerald-600 group-hover:text-white"></i>
 
                 </div>
 
+                <h3 class="mt-8 text-2xl font-bold">
 
-
-
-                <h3 class="text-2xl font-bold text-gray-900 mb-4">
                     Interior Design
+
                 </h3>
 
+                <p class="mt-5 text-slate-600 dark:text-slate-300 leading-7">
 
+                    Elegant interior environments focused on
+                    comfort,
+                    creativity,
+                    and functionality.
 
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    We design inspiring interior spaces that balance comfort,
-                    creativity, and modern lifestyle requirements.
                 </p>
 
+                <ul class="mt-8 space-y-3">
 
+                    <li>✔ Modern Interiors</li>
 
-                <ul class="space-y-3 text-gray-700">
+                    <li>✔ Material Selection</li>
 
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-green-600"></i>
-                        Modern Interiors
-                    </li>
-
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-green-600"></i>
-                        Material Selection
-                    </li>
-
-
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-check text-green-600"></i>
-                        Custom Solutions
-                    </li>
-
+                    <li>✔ Custom Solutions</li>
 
                 </ul>
 
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects"
+class="py-24
+bg-slate-50
+dark:bg-slate-950
+transition-colors duration-500">
+
+<div class="container mx-auto px-6">
+
+    <!-- Title -->
+
+    <div class="text-center max-w-3xl mx-auto mb-20">
+
+        <span class="inline-block px-4 py-2 rounded-full
+        bg-blue-100 dark:bg-blue-900/40
+        text-blue-700 dark:text-blue-300
+        text-sm font-semibold">
+
+            OUR PROJECTS
+
+        </span>
+
+        <h2 class="mt-6 text-4xl lg:text-5xl font-bold">
+
+            Featured Engineering Projects
+
+        </h2>
+
+        <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 leading-8">
+
+            Explore our architectural projects where creativity,
+            engineering and sustainability come together.
+
+        </p>
+
+    </div>
+
+    <!-- Timeline -->
+
+    <div class="relative">
+
+        <!-- Center Line -->
+
+        <div class="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-blue-200 dark:bg-slate-700 -translate-x-1/2"></div>
+
+        <!-- ================= PROJECT 1 ================= -->
+
+        <div class="relative lg:w-1/2 lg:pr-12 mb-16">
+
+            <div
+            class="rounded-3xl overflow-hidden
+            bg-white dark:bg-slate-900
+            border border-slate-200 dark:border-slate-800
+            shadow-lg hover:shadow-2xl
+            transition duration-500
+            hover:-translate-y-2">
+
+                <video autoplay muted loop playsinline
+                class="w-full aspect-video object-cover
+                hover:scale-105 transition duration-700">
+
+                    <source src="222222.mp4">
+
+                </video>
+
+                <div class="p-7">
+
+                    <span class="text-blue-600 font-semibold text-sm">
+
+                        Residential
+
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+
+                        Modern Villa Design
+
+                    </h3>
+
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">
+
+                        A contemporary residential project combining
+                        elegant architecture with functional spaces.
+
+                    </p>
+
+                </div>
 
             </div>
 
+        </div>
+
+        <!-- ================= PROJECT 2 ================= -->
+
+        <div class="relative lg:w-1/2 lg:ml-auto lg:pl-12 mb-16">
+
+            <div
+            class="rounded-3xl overflow-hidden
+            bg-white dark:bg-slate-900
+            border border-slate-200 dark:border-slate-800
+            shadow-lg hover:shadow-2xl
+            transition duration-500
+            hover:-translate-y-2">
+
+                <video autoplay muted loop playsinline
+                class="w-full aspect-video object-cover
+                hover:scale-105 transition duration-700">
+
+                    <source src="2.mp4">
+
+                </video>
+
+                <div class="p-7">
+
+                    <span class="text-purple-600 font-semibold text-sm">
+
+                        Luxury
+
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+
+                        Luxury Residence
+
+                    </h3>
+
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">
+
+                        A luxury home concept designed with modern
+                        materials and smart space organization.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= PROJECT 3 ================= -->
+
+        <div class="relative lg:w-1/2 lg:pr-12 mb-16">
+
+            <div
+            class="rounded-3xl overflow-hidden
+            bg-white dark:bg-slate-900
+            border border-slate-200 dark:border-slate-800
+            shadow-lg hover:shadow-2xl
+            transition duration-500
+            hover:-translate-y-2">
+
+                <video autoplay muted loop playsinline
+                class="w-full aspect-video object-cover
+                hover:scale-105 transition duration-700">
+
+                    <source src="2222.mp4">
+
+                </video>
+
+                <div class="p-7">
+
+                    <span class="text-green-600 font-semibold text-sm">
+
+                        Sustainable
+
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+
+                        Sustainable House
+
+                    </h3>
+
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">
+
+                        Environment-friendly design focused on
+                        efficiency and sustainability.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= PROJECT 4 ================= -->
+
+        <div class="relative lg:w-1/2 lg:ml-auto lg:pl-12 mb-16">
+
+            <div
+            class="rounded-3xl overflow-hidden
+            bg-white dark:bg-slate-900
+            border border-slate-200 dark:border-slate-800
+            shadow-lg hover:shadow-2xl
+            transition duration-500
+            hover:-translate-y-2">
+
+                <video autoplay muted loop playsinline
+                class="w-full aspect-video object-cover
+                hover:scale-105 transition duration-700">
+
+                    <source src="22222.mp4">
+
+                </video>
+
+                <div class="p-7">
+
+                    <span class="text-orange-600 font-semibold text-sm">
+
+                        Interior
+
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+
+                        Interior Concept
+
+                    </h3>
+
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">
+
+                        Creative interior solutions for inspiring spaces.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= PROJECT 5 ================= -->
+
+        <div class="relative lg:w-1/2 lg:pr-12 mb-16">
+
+            <div
+            class="rounded-3xl overflow-hidden
+            bg-white dark:bg-slate-900
+            border border-slate-200 dark:border-slate-800
+            shadow-lg hover:shadow-2xl
+            transition duration-500
+            hover:-translate-y-2">
+
+                <video autoplay muted loop playsinline
+                class="w-full aspect-video object-cover
+                hover:scale-105 transition duration-700">
+
+                    <source src="22.mp4">
+
+                </video>
+
+                <div class="p-7">
+
+                    <span class="text-cyan-600 font-semibold text-sm">
+
+                        Commercial
+
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+
+                        Commercial Building
+
+                    </h3>
+
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">
+
+                        Professional architectural solutions for modern businesses.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================= PROJECT 6 ================= -->
+
+        <div class="relative lg:w-1/2 lg:ml-auto lg:pl-12">
+
+            <div
+            class="rounded-3xl overflow-hidden
+            bg-white dark:bg-slate-900
+            border border-slate-200 dark:border-slate-800
+            shadow-lg hover:shadow-2xl
+            transition duration-500
+            hover:-translate-y-2">
+
+                <video autoplay muted loop playsinline
+                class="w-full aspect-video object-cover
+                hover:scale-105 transition duration-700">
+
+                    <source src="222.mp4">
+
+                </video>
+
+                <div class="p-7">
+
+                    <span class="text-pink-600 font-semibold text-sm">
+
+                        Future
+
+                    </span>
+
+                    <h3 class="text-2xl font-bold mt-3">
+
+                        Future Design Concept
+
+                    </h3>
+
+                    <p class="mt-4 text-slate-600 dark:text-slate-300">
+
+                        Innovative architectural vision combining
+                        technology with modern aesthetics.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+
+<section id="achievements"
+class="py-20 
+bg-gradient-to-r 
+from-blue-600 
+to-purple-600 
+dark:from-slate-900 
+dark:to-slate-800
+relative 
+overflow-hidden
+transition-colors
+duration-500">
+
+    <div class="absolute top-0 left-0 w-64 h-64 
+    bg-white/10 
+    dark:bg-blue-400/10
+    rounded-full 
+    -translate-x-1/2 
+    -translate-y-1/2">
+    </div>
+
+    <div class="absolute bottom-0 right-0 w-96 h-96 
+    bg-white/10
+    dark:bg-purple-400/10
+    rounded-full 
+    translate-x-1/2 
+    translate-y-1/2">
+    </div>
+    
+
+    <div class="container mx-auto px-4 relative z-10">
+
+        <div class="flex flex-wrap justify-around gap-8">
+            
+            <div class="text-center">
+
+                <div class="text-6xl font-bold text-white mb-2">
+                    +100
+                </div>
+
+                <div class="text-blue-100 dark:text-slate-300 text-xl">
+                    Completed Projects
+                </div>
+
+            </div>
+            
+
+            <div class="text-center">
+
+                <div class="text-6xl font-bold text-white mb-2">
+                    50+
+                </div>
+
+                <div class="text-blue-100 dark:text-slate-300 text-xl">
+                    Architectural Designs
+                </div>
+
+            </div>
+            
+
+            <div class="text-center">
+
+                <div class="text-6xl font-bold text-white mb-2">
+                    25+
+                </div>
+
+                <div class="text-blue-100 dark:text-slate-300 text-xl">
+                    Engineering Specialists
+                </div>
+
+            </div>
+            
+
+            <div class="text-center">
+
+                <div class="text-6xl font-bold text-white mb-2">
+                    10+
+                </div>
+
+                <div class="text-blue-100 dark:text-slate-300 text-xl">
+                    Years of Experience
+                </div>
+
+            </div>
 
         </div>
 
@@ -395,401 +1246,97 @@ class="w-full h-[500px] object-cover rounded-3xl shadow-2xl">
 </section>
 
 
-<section class="py-20 bg-gray-50" id="projects">
 
+
+
+
+
+
+
+
+
+
+<section class="py-20 bg-slate-50 dark:bg-slate-950 transition-colors duration-500" id="team">
     <div class="container mx-auto px-4">
 
+        <div class="text-center mb-16">
 
-        <div class="text-center max-w-3xl mx-auto mb-20 space-y-4">
-
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">
-                Our Featured Projects
+            <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                Our Engineering Team
             </h2>
 
-            <p class="text-base sm:text-xl text-gray-600 leading-relaxed">
-                Explore our architectural projects where creativity,
-                engineering, and modern design come together.
+            <p class="text-xl text-slate-600 dark:text-slate-300">
+                A team of experienced architects and engineers delivering innovative design solutions.
             </p>
 
         </div>
 
 
-
-        <div class="relative">
-
-
-            <div class="hidden lg:block absolute left-1/2 top-0 bottom-0
-                        w-1 bg-blue-200 -translate-x-1/2">
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
 
+            <div class="bg-white dark:bg-slate-900 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
+
+                <div class="relative h-64 overflow-hidden">
+
+                    <img src="0.png"
+                         alt="Munia Elayyan"
+                         class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110">
 
 
-            <div class="relative lg:w-1/2 lg:pr-12 mb-12 lg:mb-24">
+                    <div class="absolute inset-0 bg-blue-600/75 flex items-center justify-center gap-4
+                                opacity-0 group-hover:opacity-100 transition-all duration-500">
 
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg
-                            hover:shadow-2xl transition-all duration-500
-                            hover:-translate-y-2">
+                        <a href="#" 
+                           class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all duration-300 hover:scale-110">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
 
 
-                    <video autoplay muted loop playsinline
-                           class="w-full aspect-video object-cover">
+                        <a href="https://github.com/MuniaElayyan"
+                           class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all duration-300 delay-75 hover:scale-110"
+                           target="_blank">
 
-                        <source src="222222.mp4" type="video/mp4">
+                            <i class="fab fa-github"></i>
 
-                    </video>
-
-
-
-                    <div class="p-6">
+                        </a>
 
 
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Modern Villa Design
-                        </h3>
+                        <a href="https://www.linkedin.com/in/muniaelayyan/"
+                           class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all duration-300 delay-150 hover:scale-110">
 
+                            <i class="fab fa-linkedin-in"></i>
 
-                        <p class="text-gray-600 leading-relaxed">
-                            A contemporary residential project combining
-                            elegant architecture with functional spaces.
-                        </p>
+                        </a>
 
 
                     </div>
 
-
                 </div>
 
+
+                <div class="p-6 text-center">
+
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+                        Munia Elayyan
+                    </h3>
+
+                    <p class="text-blue-600 mb-3">
+                        Project Director
+                    </p>
+
+                    <p class="text-slate-600 dark:text-slate-300 text-sm">
+                        Leading project management and engineering operations.
+                    </p>
+
+                </div>
 
             </div>
 
+            <!-- Basmala -->
 
-
-
-
-
-
-            <div class="relative lg:w-1/2 lg:ml-auto lg:pl-12 mb-12 lg:mb-24">
-
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg
-                            hover:shadow-2xl transition-all duration-500
-                            hover:-translate-y-2">
-
-
-                    <video autoplay muted loop playsinline
-                           class="w-full aspect-video object-cover">
-
-                        <source src="2.mp4" type="video/mp4">
-
-                    </video>
-
-
-
-                    <div class="p-6">
-
-
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Luxury Residence
-                        </h3>
-
-
-                        <p class="text-gray-600 leading-relaxed">
-                            A luxury home concept designed with modern
-                            materials and smart space organization.
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-
-            <div class="relative lg:w-1/2 lg:pr-12 mb-12 lg:mb-24">
-
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg
-                            hover:shadow-2xl transition-all duration-500
-                            hover:-translate-y-2">
-
-
-                    <video autoplay muted loop playsinline
-                           class="w-full aspect-video object-cover">
-
-
-                        <source src="2222.mp4" type="video/mp4">
-
-
-                    </video>
-
-
-
-                    <div class="p-6">
-
-
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Sustainable House
-                        </h3>
-
-
-                        <p class="text-gray-600 leading-relaxed">
-                            Environment-friendly design focused on efficiency,
-                            comfort, and sustainability.
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-
-            <div class="relative lg:w-1/2 lg:ml-auto lg:pl-12 mb-12 lg:mb-24">
-
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg
-                            hover:shadow-2xl transition-all duration-500
-                            hover:-translate-y-2">
-
-
-                    <video autoplay muted loop playsinline
-                           class="w-full aspect-video object-cover">
-
-
-                        <source src="22222.mp4" type="video/mp4">
-
-
-                    </video>
-
-
-
-                    <div class="p-6">
-
-
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Interior Concept
-                        </h3>
-
-
-                        <p class="text-gray-600 leading-relaxed">
-                            Creative interior solutions that create comfortable
-                            and inspiring living spaces.
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-
-            <div class="relative lg:w-1/2 lg:pr-12 mb-12 lg:mb-24">
-
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg
-                            hover:shadow-2xl transition-all duration-500
-                            hover:-translate-y-2">
-
-
-                    <video autoplay muted loop playsinline
-                           class="w-full aspect-video object-cover">
-
-
-                        <source src="22.mp4" type="video/mp4">
-
-
-                    </video>
-
-
-
-                    <div class="p-6">
-
-
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Commercial Building
-                        </h3>
-
-
-                        <p class="text-gray-600 leading-relaxed">
-                            Professional architectural solutions for modern
-                            commercial environments.
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-
-            <div class="relative lg:w-1/2 lg:ml-auto lg:pl-12">
-
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg
-                            hover:shadow-2xl transition-all duration-500
-                            hover:-translate-y-2">
-
-
-                    <video autoplay muted loop playsinline
-                           class="w-full aspect-video object-cover">
-
-
-                        <source src="222.mp4" type="video/mp4">
-
-
-                    </video>
-
-
-
-                    <div class="p-6">
-
-
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
-                            Future Design Concept
-                        </h3>
-
-
-                        <p class="text-gray-600 leading-relaxed">
-                            Innovative architectural vision combining
-                            technology and modern aesthetics.
-                        </p>
-
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-    
-    <section id="achievements"
-class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full translate-x-1/2 translate-y-1/2"></div>
-        
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="flex flex-wrap justify-around gap-8">
-                
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-white mb-2">+100</div>
-                    <div class="text-blue-100 text-xl">Completed Projects
-</div>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-white mb-2">50+
-</div>
-                    <div class="text-blue-100 text-xl">Architectural Designs</div>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-white mb-2">25+</div>
-                    <div class="text-blue-100 text-xl">Engineering Specialists
-</div>
-                </div>
-                
-                <div class="text-center">
-                    <div class="text-6xl font-bold text-white mb-2">10+</div>
-                    <div class="text-blue-100 text-xl">Years of Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   
-    <section class="py-20 bg-gray-50" id="team">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Engineering Team</h2>
-                <p class="text-xl text-gray-600">A team of experienced architects and engineers delivering innovative design solutions.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
-
-    <div class="relative h-64 overflow-hidden">
-
-        <img src="0.png"
-             alt="Munia Elayyan"
-             class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110">
-
-        <div class="absolute inset-0 bg-blue-600/75 flex items-center justify-center gap-4
-                    opacity-0 group-hover:opacity-100 transition-all duration-500">
-
-            <a href="#" 
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all duration-300 hover:scale-110">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="https://github.com/MuniaElayyan"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all duration-300 delay-75 hover:scale-110"target="_blank">
-<i class="fab fa-github"></i>            </a>
-
-            <a href="https://www.linkedin.com/in/muniaelayyan/"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 hover:bg-blue-100 transition-all duration-300 delay-150 hover:scale-110">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="p-6 text-center">
-        <h3 class="text-xl font-bold">Munia Elayyan</h3>
-        <p class="text-blue-600 mb-3">Project Director</p>
-        <p class="text-gray-600 text-sm">Leading project management and engineering operations.</p>
-    </div>
-
-</div>
-
-               <div class="bg-white rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
+<div class="bg-white dark:bg-slate-900 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
 
     <div class="relative h-64 overflow-hidden">
 
@@ -797,36 +1344,65 @@ class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidd
              alt="Basmala Sabbah"
              class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110">
 
+
         <div class="absolute inset-0 bg-purple-600/75 flex items-center justify-center gap-4
                     opacity-0 group-hover:opacity-100 transition-all duration-500">
 
+
             <a href="#"
                class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-100 transition-all duration-300 hover:scale-110">
+
                 <i class="fab fa-facebook-f"></i>
+
             </a>
+
 
             <a href="https://github.com/Basmala-Sabbah"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-100 transition-all duration-300 delay-75 hover:scale-110"target="_blank">
-<i class="fab fa-github"></i>            </a>
+               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-100 transition-all duration-300 delay-75 hover:scale-110"
+               target="_blank">
 
-            <a href="https://www.linkedin.com/in/basmala-sabbah-055b09383/" target="_blank"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-100 transition-all duration-300 delay-150 hover:scale-110">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-github"></i>
+
             </a>
+
+
+            <a href="https://www.linkedin.com/in/basmala-sabbah-055b09383/"
+               target="_blank"
+               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-purple-600 hover:bg-purple-100 transition-all duration-300 delay-150 hover:scale-110">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
 
         </div>
 
     </div>
 
+
     <div class="p-6 text-center">
-        <h3 class="text-xl font-bold">Basmala Sabbah</h3>
-        <p class="text-purple-600 mb-3">Lead Architect</p>
-        <p class="text-gray-600 text-sm">Specialized in modern architectural design and planning.</p>
+
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+            Basmala Sabbah
+        </h3>
+
+        <p class="text-purple-600 mb-3">
+            Lead Architect
+        </p>
+
+        <p class="text-slate-600 dark:text-slate-300 text-sm">
+            Specialized in modern architectural design and planning.
+        </p>
+
     </div>
 
 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
+
+
+<!-- Zaina -->
+
+<div class="bg-white dark:bg-slate-900 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
 
     <div class="relative h-64 overflow-hidden">
 
@@ -834,36 +1410,65 @@ class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidd
              alt="Zaina Khader"
              class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110">
 
+
         <div class="absolute inset-0 bg-green-600/75 flex items-center justify-center gap-4
                     opacity-0 group-hover:opacity-100 transition-all duration-500">
 
+
             <a href="#"
                class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-green-600 hover:bg-green-100 transition-all duration-300 hover:scale-110">
+
                 <i class="fab fa-facebook-f"></i>
+
             </a>
+
 
             <a href="#"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-green-600 hover:bg-green-100 transition-all duration-300 delay-75 hover:scale-110"target="_blank">
-<i class="fab fa-github"></i>            </a>
+               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-green-600 hover:bg-green-100 transition-all duration-300 delay-75 hover:scale-110"
+               target="_blank">
 
-            <a href="https://www.linkedin.com/in/zaina-khader-129036362/" target="_blank"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-green-600 hover:bg-green-100 transition-all duration-300 delay-150 hover:scale-110">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-github"></i>
+
             </a>
+
+
+            <a href="https://www.linkedin.com/in/zaina-khader-129036362/"
+               target="_blank"
+               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-green-600 hover:bg-green-100 transition-all duration-300 delay-150 hover:scale-110">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
 
         </div>
 
     </div>
 
+
     <div class="p-6 text-center">
-        <h3 class="text-xl font-bold">Zaina Khader</h3>
-        <p class="text-green-600 mb-3">Structural Engineer</p>
-        <p class="text-gray-600 text-sm">Expert in structural design and construction solutions.</p>
+
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+            Zaina Khader
+        </h3>
+
+        <p class="text-green-600 mb-3">
+            Structural Engineer
+        </p>
+
+        <p class="text-slate-600 dark:text-slate-300 text-sm">
+            Expert in structural design and construction solutions.
+        </p>
+
     </div>
 
 </div>
 
-               <div class="bg-white rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
+
+
+<!-- Layan -->
+
+<div class="bg-white dark:bg-slate-900 rounded-3xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-500">
 
     <div class="relative h-64 overflow-hidden">
 
@@ -871,149 +1476,384 @@ class="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidd
              alt="Layan Badran"
              class="w-full h-full object-cover transition-all duration-700 ease-out group-hover:scale-110">
 
+
         <div class="absolute inset-0 bg-yellow-600/75 flex items-center justify-center gap-4
                     opacity-0 group-hover:opacity-100 transition-all duration-500">
 
+
             <a href="#"
                class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-yellow-600 hover:bg-yellow-100 transition-all duration-300 hover:scale-110">
+
                 <i class="fab fa-facebook-f"></i>
+
             </a>
+
 
             <a href="https://github.com/layanbadran"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-yellow-600 hover:bg-yellow-100 transition-all duration-300 delay-75 hover:scale-110"target="_blank">
-<i class="fab fa-github"></i>            </a>
+               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-yellow-600 hover:bg-yellow-100 transition-all duration-300 delay-75 hover:scale-110"
+               target="_blank">
 
-            <a href="https://www.linkedin.com/in/layan-badran-842736363/" target="_blank"
-               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-yellow-600 hover:bg-yellow-100 transition-all duration-300 delay-150 hover:scale-110">
-                <i class="fab fa-linkedin-in"></i>
+                <i class="fab fa-github"></i>
+
             </a>
 
+
+            <a href="https://www.linkedin.com/in/layan-badran-842736363/"
+               target="_blank"
+               class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-yellow-600 hover:bg-yellow-100 transition-all duration-300 delay-150 hover:scale-110">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+
         </div>
 
     </div>
+
 
     <div class="p-6 text-center">
-        <h3 class="text-xl font-bold">Layan Badran</h3>
-        <p class="text-yellow-600 mb-3">Interior Designer</p>
-        <p class="text-gray-600 text-sm">Specialized in creative interior spaces and finishes.</p>
+
+        <h3 class="text-xl font-bold text-slate-900 dark:text-white">
+            Layan Badran
+        </h3>
+
+        <p class="text-yellow-600 mb-3">
+            Interior Designer
+        </p>
+
+        <p class="text-slate-600 dark:text-slate-300 text-sm">
+            Specialized in creative interior spaces and finishes.
+        </p>
+
     </div>
 
 </div>
-            </div>
-        </div>
-    </section>
-   
-    <footer class="bg-gray-900 text-white" id="contact">
-        <!-- Contact Section -->
-        <div class="container mx-auto px-4 py-16">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                
-                <div class="bg-gray-800 p-8 rounded-3xl">
-                    <h3 class="text-2xl font-bold mb-6">Contact Us</h3>
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Full Name" 
-                                   class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white
-                                          placeholder-gray-400
-                                          focus:ring-4 focus:ring-blue-600 focus:outline-none
-                                          transition">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Email Address" 
-                                   class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white
-                                          placeholder-gray-400
-                                          focus:ring-4 focus:ring-blue-600 focus:outline-none
-                                          transition">
-                        </div>
-                        <div>
-                            <textarea rows="5" placeholder="Your message..."
-                                      class="w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white
-                                             placeholder-gray-400
-                                             focus:ring-4 focus:ring-blue-600 focus:outline-none
-                                             transition"></textarea>
-                        </div>
-                        <button class="w-full bg-blue-600 text-white py-4 rounded-lg font-semibold
-                                       hover:bg-blue-700 transition-all duration-300
-                                       focus:ring-4 focus:ring-blue-800">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+</section>
 
-                <div class="space-y-8">
-                    <h3 class="text-2xl font-bold">Contact Information</h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-map-marker-alt text-blue-500 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400 text-sm">Address</p>
-                                <p class="font-medium">Tulkarm, Palestine</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-phone text-blue-500 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400 text-sm">Phone</p>
-                                <p class="font-medium">+20 123 456 7890</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center">
-                                <i class="fas fa-envelope text-blue-500 text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-gray-400 text-sm">Email</p>
-                                <p class="font-medium">muniaelayyan2024@gmail.com</p>
-                            </div>
-                        </div>
+<footer 
+class="bg-slate-900 text-white dark:bg-slate-950 transition-colors duration-500" 
+id="contact">
+
+    <!-- Contact Section -->
+    <div class="container mx-auto px-4 py-16">
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <div class="
+            bg-slate-800 
+            dark:bg-slate-900 
+            p-8 
+            rounded-3xl">
+
+                <h3 class="text-2xl font-bold mb-6">
+                    Contact Us
+                </h3>
+
+                <form class="space-y-6">
+
+                    <div>
+                        <input 
+                        type="text" 
+                        placeholder="Full Name" 
+                        class="
+                        w-full 
+                        p-4 
+                        bg-slate-700 
+                        dark:bg-slate-800
+                        border 
+                        border-slate-600 
+                        rounded-lg 
+                        text-white
+                        placeholder-slate-400
+                        focus:ring-4 
+                        focus:ring-blue-600 
+                        focus:outline-none
+                        transition">
                     </div>
 
-<div class="h-72 rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center">
 
-    <img src="Image.png"
-         alt="Map"
-                class="w-full h-full object-contain p-1"
->
+                    <div>
+                        <input 
+                        type="email" 
+                        placeholder="Email Address" 
+                        class="
+                        w-full 
+                        p-4 
+                        bg-slate-700
+                        dark:bg-slate-800
+                        border 
+                        border-slate-600 
+                        rounded-lg 
+                        text-white
+                        placeholder-slate-400
+                        focus:ring-4 
+                        focus:ring-blue-600 
+                        focus:outline-none
+                        transition">
+                    </div>
+
+
+                    <div>
+                        <textarea 
+                        rows="5" 
+                        placeholder="Your message..."
+                        class="
+                        w-full 
+                        p-4 
+                        bg-slate-700
+                        dark:bg-slate-800
+                        border 
+                        border-slate-600 
+                        rounded-lg 
+                        text-white
+                        placeholder-slate-400
+                        focus:ring-4 
+                        focus:ring-blue-600 
+                        focus:outline-none
+                        transition"></textarea>
+                    </div>
+
+
+                    <button 
+                    class="
+                    w-full 
+                    bg-blue-600 
+                    text-white 
+                    py-4 
+                    rounded-lg 
+                    font-semibold
+                    hover:bg-blue-700 
+                    transition-all 
+                    duration-300
+                    focus:ring-4 
+                    focus:ring-blue-800">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+
+            <div class="space-y-8">
+
+                <h3 class="text-2xl font-bold">
+                    Contact Information
+                </h3>
+
+
+                <div class="space-y-4">
+
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="
+                        w-12 
+                        h-12 
+                        bg-blue-600/20 
+                        rounded-lg 
+                        flex 
+                        items-center 
+                        justify-center">
+
+                            <i class="fas fa-map-marker-alt text-blue-500 text-xl"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-slate-400 text-sm">
+                                Address
+                            </p>
+
+                            <p class="font-medium">
+                                Tulkarm, Palestine
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="
+                        w-12 
+                        h-12 
+                        bg-blue-600/20 
+                        rounded-lg 
+                        flex 
+                        items-center 
+                        justify-center">
+
+                            <i class="fas fa-phone text-blue-500 text-xl"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-slate-400 text-sm">
+                                Phone
+                            </p>
+
+                            <p class="font-medium">
+                                +20 123 456 7890
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="
+                        w-12 
+                        h-12 
+                        bg-blue-600/20 
+                        rounded-lg 
+                        flex 
+                        items-center 
+                        justify-center">
+
+                            <i class="fas fa-envelope text-blue-500 text-xl"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="text-slate-400 text-sm">
+                                Email
+                            </p>
+
+                            <p class="font-medium">
+                                muniaelayyan2024@gmail.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="
+h-72
+rounded-2xl
+overflow-hidden
+shadow-xl
+border
+border-slate-200
+dark:border-slate-700">
+
+    <iframe
+        src="https://www.google.com/maps?q=Tulkarm,Palestine&output=embed"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
 
 </div>
 
 
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div class="
+    border-t 
+    border-slate-800">
+
+        <div class="
+        container 
+        mx-auto 
+        px-4 
+        py-6">
+
+            <div class="
+            flex 
+            flex-col 
+            md:flex-row 
+            justify-between 
+            items-center 
+            gap-4">
+
+
+                <div class="
+                text-slate-400 
+                text-sm">
+
+                    © 2026 Sustainable Innovation Center. All rights reserved.
+
+                </div>
+
+
+
+                <div class="flex gap-6">
+
+
+                    <a href="#" 
+                    class="text-slate-400 hover:text-white transition">
+
+                        <i class="fab fa-facebook-f text-xl"></i>
+
+                    </a>
+
+
+                    <a href="#" 
+                    class="text-slate-400 hover:text-white transition">
+
+                        <i class="fab fa-twitter text-xl"></i>
+
+                    </a>
+
+
+                    <a href="#" 
+                    class="text-slate-400 hover:text-white transition">
+
+                        <i class="fab fa-linkedin-in text-xl"></i>
+
+                    </a>
+
+
+                    <a href="#" 
+                    class="text-slate-400 hover:text-white transition">
+
+                        <i class="fab fa-instagram text-xl"></i>
+
+                    </a>
 
 
                 </div>
+
+
             </div>
+
         </div>
 
-        <div class="border-t border-gray-800">
-            <div class="container mx-auto px-4 py-6">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div class="text-gray-400 text-sm">
-© 2026 Sustainable Innovation Center. All rights reserved.                    </div>
-                    <div class="flex gap-6">
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-      </div>
+    </div>
+
+
+</footer>
+       </div>
 </body>
 </html>
